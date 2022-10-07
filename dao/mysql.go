@@ -22,6 +22,5 @@ func NewDBClient() (*gorm.DB, error) {
 	if err != nil {
 		log.Errorf("mysql connect error:%v", err)
 	}
-	DBClient.AutoMigrate(User{})
 	return db, nil
 }

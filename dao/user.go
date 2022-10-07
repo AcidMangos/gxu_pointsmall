@@ -7,10 +7,11 @@ import (
 
 type User struct {
 	gorm.Model
-	UseId          uint `gorm:"primary_key"`
+	UseId          uint `gorm:"unique"`
 	UserName       string
 	Email          string `gorm:"unique"`
 	PasswordDigest string
+	Points         uint `gorm:"default:0"`
 }
 
 // GetUser 获取用户

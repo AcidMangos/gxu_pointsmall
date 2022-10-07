@@ -30,7 +30,7 @@ type Storage struct {
 
 var (
 	Conf       = Config{}
-	configPath = "./config/config.yaml"
+	configPath = "./gxu_pointsmall/config/config.yaml"
 )
 
 type Config struct {
