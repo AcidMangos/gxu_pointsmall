@@ -7,11 +7,11 @@ import (
 
 type User struct {
 	gorm.Model
-	UseId          uint `gorm:"unique"`
 	UserName       string
 	Email          string `gorm:"unique"`
 	PasswordDigest string
-	Points         uint `gorm:"default:0"`
+	Points         uint   `gorm:"default:0"`
+	Avatar         string `gorm:"size:1000"`
 }
 
 // GetUser 获取用户
@@ -35,4 +35,8 @@ func (user *User) SetPassword(password string) error {
 func (user *User) CheckPassword(password string) bool {
 	err := bcrypt.CompareHashAndPassword([]byte(user.PasswordDigest), []byte(password))
 	return err != nil
+}
+
+func (user *User) AvatarURL() string {
+	return ""
 }

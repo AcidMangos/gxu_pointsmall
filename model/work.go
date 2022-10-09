@@ -1,10 +1,8 @@
-package dao
+package model
 
-import "gorm.io/gorm"
-
-// Work 商品模型
+// Work 商品模型序列化器
 type Work struct {
-	gorm.Model
+
 	Name    string
 	Title   string
 	Info    string `gorm:"size:1000"`

@@ -28,3 +28,7 @@ func (admin *Admin) CheckPassword(password string) bool {
 	err := bcrypt.CompareHashAndPassword([]byte(admin.PasswordDigest), []byte(password))
 	return err == nil
 }
+
+func (admin *Admin) AvatarURL() string {
+	return ""
+}
