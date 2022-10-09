@@ -1,1 +1,1 @@
-# gxu_pointsmall
+# 积分商城
