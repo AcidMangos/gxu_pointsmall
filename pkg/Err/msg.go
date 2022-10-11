@@ -29,6 +29,8 @@ var MsgFlags = map[int]string{
 
 	ERROR_DATABASE: "数据库操作出错，请重试",
 
+	Error_open_file: "打开文件失败",
+
 	ERROR_OSS: "OSS配置错误",
 }
 

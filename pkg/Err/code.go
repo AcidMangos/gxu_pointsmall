@@ -30,4 +30,6 @@ const (
 	ERROR_DATABASE = 30001
 
 	ERROR_OSS = 40001
+
+	Error_open_file = 50001
 )

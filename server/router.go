@@ -12,8 +12,9 @@ func NewRouter() *gin.Engine {
 	//r.Use(sessions.Sessions("mysession", store))
 	// 路由
 	r.GET("/ping", api.Ping)
-	r.POST("/register", api.AdminRegister)
-	r.POST("/login", api.AdminLogin)
+	//r.POST("/register", api.AdminRegister)
+	//r.POST("/login", api.AdminLogin)
+	r.POST("/induct", api.UseRegister)
 	/*
 		v1 := r.Group("/api/v1")
 		{

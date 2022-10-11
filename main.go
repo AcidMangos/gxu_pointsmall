@@ -12,10 +12,12 @@ func main() {
 	// 装载路由
 	r := server.NewRouter()
 	r.Run(":8000")
+
 }
 
 // 数据库初始化连接
 func init() {
+
 	// 读取翻译文件
 	if err := config.LoadLocales("gxu_pointsmall/config/config.yaml"); err != nil {
 		logging.Info(err)
@@ -26,4 +28,5 @@ func init() {
 		panic(err)
 	}
 	dao.DBClient = mysqlClient
+	dao.Migration()
 }
