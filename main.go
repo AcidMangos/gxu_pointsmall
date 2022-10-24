@@ -4,15 +4,13 @@ import (
 	"gxu_pointsmall/config"
 	"gxu_pointsmall/dao"
 	"gxu_pointsmall/pkg/logging"
-	"gxu_pointsmall/server"
 )
 
 func main() {
 
 	// 装载路由
-	r := server.NewRouter()
-	r.Run(":8000")
-
+	//r := server.NewRouter()
+	//r.Run(":8000")
 }
 
 // 数据库初始化连接
@@ -24,9 +22,14 @@ func init() {
 		panic(err)
 	}
 	mysqlClient, err := dao.NewDBClient()
+	redisClient, er := dao.NewRedisClient()
 	if err != nil {
 		panic(err)
 	}
+	if er != nil {
+		panic(err)
+	}
+	dao.RedisClient = redisClient
 	dao.DBClient = mysqlClient
 	dao.Migration()
 }

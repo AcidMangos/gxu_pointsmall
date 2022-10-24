@@ -9,4 +9,5 @@ type Order struct {
 	ProductID uint
 	OrderNum  uint64
 	Price     uint
+	Type      uint
 }

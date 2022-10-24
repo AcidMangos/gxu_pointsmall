@@ -37,3 +37,8 @@ func BuildListResponse(items interface{}, total uint) Response {
 		},
 	}
 }
+
+// redis key
+const (
+	redisKey = "redis"
+)

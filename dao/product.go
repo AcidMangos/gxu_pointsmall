@@ -10,5 +10,6 @@ type Product struct {
 	Info       string `gorm:"size:1000"`
 	ProductNum uint
 	ImgPath    string
-	Price      uint
+	Price      string
+	CategoryId int
 }
